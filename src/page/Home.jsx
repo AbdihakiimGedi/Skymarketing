@@ -4,10 +4,10 @@ import { Phone, Mail, Play } from "lucide-react";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
-const DOOR_TO_DOOR_IMGS = [1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => `/door-to-door/${n}.jpeg`);
+const DOOR_TO_DOOR_IMGS = [1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => `${import.meta.env.BASE_URL}door-to-door/${n}.jpeg`);
 const WORKSHOP_IMGS = [
-  ...([1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25].map((n) => `/workshops/${n}.jpeg`)),
-  `/workshops/${encodeURIComponent("WhatsApp Image 2026-03-11 at 02.00.35.jpeg")}`,
+  ...([1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25].map((n) => `${import.meta.env.BASE_URL}workshops/${n}.jpeg`)),
+  `${import.meta.env.BASE_URL}workshops/${encodeURIComponent("WhatsApp Image 2026-03-11 at 02.00.35.jpeg")}`,
 ];
 
 function WaveDivider({ className = "text-white" }) {
@@ -91,7 +91,7 @@ function ImageSlideshow({ images, title, id, embedded }) {
   );
 }
 
-const HOW_WE_WORK_VIDEO = "/videos/how-we-work.mp4.mp4";
+const HOW_WE_WORK_VIDEO = `${import.meta.env.BASE_URL}videos/how-we-work.mp4.mp4`;
 
 const Home = () => {
   const [videoOpen, setVideoOpen] = useState(false);
@@ -107,7 +107,7 @@ const Home = () => {
       <header id="home" className="relative min-h-[70vh] sm:min-h-[75vh] flex flex-col scroll-mt-20 md:scroll-mt-24">
         <div className="absolute inset-0">
           <img
-            src="skyTeam2.jpeg"
+            src={`${import.meta.env.BASE_URL}skyTeam2.jpeg`}
             alt="Sky Digital Marketing"
             className="w-full h-full object-cover"
           />
@@ -204,7 +204,7 @@ const Home = () => {
               <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
                 <div className="aspect-[4/3] max-h-[260px] sm:max-h-[300px] bg-gray-200">
                   <img
-                    src="/skyTeam1.jpeg"
+                    src={`${import.meta.env.BASE_URL}skyTeam1.jpeg`}
                     alt="Sky Team"
                     className="w-full h-full object-cover"
                   />
@@ -229,12 +229,12 @@ const Home = () => {
                   <p className="text-xs text-gray-800/90">Data-driven growth</p>
                 </div>
               </div>
-              <div className="mt-4 flex gap-3 min-w-0">
+              <div className="mt-4 flex gap-3 min-w-0 flex-col sm:flex-row">
                 <div className="rounded-xl overflow-hidden shadow-lg aspect-[4/3] max-h-[140px] sm:max-h-[160px] flex-1 min-w-0">
-                  <img src="/skyTeam2.jpeg" alt="Sky Team" className="w-full h-full object-cover" />
+                  <img src={`${import.meta.env.BASE_URL}skyTeam2.jpeg`} alt="Sky Team" className="w-full h-full object-cover" />
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg aspect-[4/3] max-h-[140px] sm:max-h-[160px] flex-1 min-w-0">
-                  <img src="/skyTeam3.jpeg" alt="Sky Team" className="w-full h-full object-cover" />
+                  <img src={`${import.meta.env.BASE_URL}skyTeam3.jpeg`} alt="Sky Team" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>
@@ -326,7 +326,7 @@ const Home = () => {
             <video
               className="w-full h-full object-contain"
               src={HOW_WE_WORK_VIDEO}
-              poster="/skyTeam1.jpeg"
+              poster={`${import.meta.env.BASE_URL}skyTeam1.jpeg`}
               controls
               playsInline
               preload="metadata"
@@ -392,12 +392,12 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {[
-              { image: "/services/digital-Markeeting.jpg", title: "Digital Marketing", desc: "Reach your audience online with data-driven campaigns across web, social, and paid channels." },
-              { image: "/services/content-Markeeting.jpg", title: "Content Marketing", desc: "Create and distribute valuable content that attracts, engages, and converts your target audience." },
-              { image: "/services/Tranditional-Markeeting.jpeg", title: "Traditional Marketing", desc: "Print, broadcast, and outdoor campaigns that build brand awareness in your local market." },
-              { image: "/services/Influencer-Marketing.png", title: "Influencer Marketing", desc: "Partner with trusted voices to amplify your brand and reach engaged communities." },
-              { image: "/services/Affiliate-Marketing.jpg", title: "Affiliate Marketing", desc: "Grow sales through partner networks and performance-based referral programs." },
-              { image: "/services/Inbound-Marketing.jpg", title: "Inbound Marketing", desc: "Attract prospects with helpful content, SEO, and experiences that convert visitors into customers." },
+              { image: `${import.meta.env.BASE_URL}services/digital-Markeeting.jpg`, title: "Digital Marketing", desc: "Reach your audience online with data-driven campaigns across web, social, and paid channels." },
+              { image: `${import.meta.env.BASE_URL}services/content-Markeeting.jpg`, title: "Content Marketing", desc: "Create and distribute valuable content that attracts, engages, and converts your target audience." },
+              { image: `${import.meta.env.BASE_URL}services/Tranditional-Markeeting.jpeg`, title: "Traditional Marketing", desc: "Print, broadcast, and outdoor campaigns that build brand awareness in your local market." },
+              { image: `${import.meta.env.BASE_URL}services/Influencer-Marketing.png`, title: "Influencer Marketing", desc: "Partner with trusted voices to amplify your brand and reach engaged communities." },
+              { image: `${import.meta.env.BASE_URL}services/Affiliate-Marketing.jpg`, title: "Affiliate Marketing", desc: "Grow sales through partner networks and performance-based referral programs." },
+              { image: `${import.meta.env.BASE_URL}services/Inbound-Marketing.jpg`, title: "Inbound Marketing", desc: "Attract prospects with helpful content, SEO, and experiences that convert visitors into customers." },
             ].map((card, i) => (
               <motion.div
                 key={i}
@@ -474,9 +474,9 @@ const Home = () => {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {[
-              { name: "Ibrahim Adan Abbdi", role: "CEO, Sky Marketing", img: "/Experts/ibrahim.jpeg" },
-              { name: "Abdinur Kamal Mohamed (Daryeel)", role: "Operation Director · IT Specialist", img: "/Experts/abdinur.jpeg" },
-              { name: "Cabdiwalu Maxamed Xareed", role: "Secretary", img: "/Experts/" + encodeURIComponent("Cabdi Wali .jpeg") },
+              { name: "Ibrahim Adan Abbdi", role: "CEO, Sky Marketing", img: `${import.meta.env.BASE_URL}Experts/ibrahim.jpeg` },
+              { name: "Abdinur Kamal Mohamed (Daryeel)", role: "Operation Director · IT Specialist", img: `${import.meta.env.BASE_URL}Experts/abdinur.jpeg` },
+              { name: "Cabdiwalu Maxamed Xareed", role: "Secretary", img: `${import.meta.env.BASE_URL}Experts/${encodeURIComponent("Cabdi Wali .jpeg")}` },
             ].map((member, i) => (
               <motion.div
                 key={i}
